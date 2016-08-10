@@ -1,5 +1,5 @@
 
-import {Request, Response, RequestHandler} from 'express';
+import {IncomingMessage, ServerResponse} from 'http';
 
 /**
  * Options common for all parsers
@@ -16,11 +16,11 @@ export interface ParserOptions {
     /**
      * request content-type to parse, passed directly to the type-is library. (default: 'json')
      */
-    type?: string | ((req: Request) => boolean);
+    type?: string | ((req: IncomingMessage) => boolean);
     /**
      * function to verify body content, the parsing can be aborted by throwing an error.
      */
-    verify?: (req: Request, res: Response, buf: Buffer, encoding: string) => void;
+    verify?: (req: IncomingMessage, res: ServerResponse, buf: Buffer, encoding: string) => void;
 }
 export interface Parsed {
     body: any;
@@ -36,7 +36,7 @@ export interface JsonParserOptions extends ParserOptions {
      */
     reviver?: (key: string, value: any) => any;
 }
-export function json(options?: JsonParserOptions): RequestHandler;
+export function json(options?: JsonParserOptions): (req: IncomingMessage, res: ServerResponse, next: (err?: any) => void) => void;
 /**
  * You can use this in your parameter typing for `req`:
  *
@@ -47,7 +47,7 @@ export function json(options?: JsonParserOptions): RequestHandler;
 export interface ParsedAsJson extends Parsed {}
 
 export interface RawParserOptions extends ParserOptions { }
-export function raw(options?: RawParserOptions): RequestHandler;
+export function raw(options?: RawParserOptions): (req: IncomingMessage, res: ServerResponse, next: (err?: any) => void) => void;
 /**
  * You can use this in your parameter typing for `req`:
  *
@@ -65,7 +65,7 @@ export interface TextParserOptions extends ParserOptions {
      */
     defaultCharset?: string;
 }
-export function text(options?: TextParserOptions): RequestHandler;
+export function text(options?: TextParserOptions): (req: IncomingMessage, res: ServerResponse, next: (err?: any) => void) => void;
 /**
  * You can use this in your parameter typing for `req`:
  *
@@ -89,7 +89,7 @@ export interface UrlencodedParserOptions {
      */
     parameterLimit: number;
 }
-export function urlencoded(options?: UrlencodedParserOptions): RequestHandler;
+export function urlencoded(options?: UrlencodedParserOptions): (req: IncomingMessage, res: ServerResponse, next: (err?: any) => void) => void;
 /**
  * You can use this in your parameter typing for `req`:
  *
