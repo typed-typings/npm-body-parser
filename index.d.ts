@@ -81,13 +81,13 @@ export interface UrlencodedParserOptions {
     /**
      * parse extended syntax with the qs module.
      */
-    extended: boolean;
+    extended?: boolean;
 
     /**
      * controls the maximum number of parameters that are allowed in the URL-encoded data.
      * If a request contains more parameters than this value, a 413 will be returned to the client. Defaults to 1000.
      */
-    parameterLimit: number;
+    parameterLimit?: number;
 }
 export function urlencoded(options?: UrlencodedParserOptions): (req: IncomingMessage, res: ServerResponse, next: (err?: any) => void) => void;
 /**
