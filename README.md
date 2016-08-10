@@ -12,7 +12,7 @@ typings install --save body-parser
 
 ```ts
 import express = require('express');
-import {Request, Response} = require('express');
+import {Request, Response} from 'express';
 import {text, ParsedAsText} from 'body-parser';
 
 const app = express();
