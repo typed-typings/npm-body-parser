@@ -89,7 +89,7 @@ export interface UrlencodedParserOptions {
      */
     parameterLimit: number;
 }
-export function urlencoded(options: UrlencodedParserOptions): RequestHandler;
+export function urlencoded(options?: UrlencodedParserOptions): RequestHandler;
 /**
  * You can use this in your parameter typing for `req`:
  *

@@ -1,12 +1,12 @@
 
 import express = require('express');
-import {Request, Response} = require('express');
+import {Request, Response} from 'express';
 import {raw, json, text, urlencoded, ParsedAsJson, ParsedAsText, ParsedRaw, ParsedAsUrlencoded} from 'body-parser';
 
 const app = express();
 
 app.post('/rawdemo', raw(), (req: Request & ParsedRaw, res: Response) => {
-    console.log(req.body.readUint8());
+    console.log(req.body.readUInt8(0));
 });
 
 app.post('/jsondemo', json(), (req: Request & ParsedAsJson, res: Response) => {
