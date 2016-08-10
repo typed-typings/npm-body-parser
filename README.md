@@ -17,7 +17,7 @@ import {text, ParsedAsText} from 'body-parser';
 
 const app = express();
 
-app.post('/textdemo', text(), (req: Request & ParsedAsText, res: Response) => {
+app.post('/textdemo', text({limit: '1MB'}), (req: Request & ParsedAsText, res: Response) => {
     // req.body is now a string
     console.log(req.body.substr(3));
 });
