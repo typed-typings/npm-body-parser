@@ -24,7 +24,7 @@ app.post('/textdemo', text({limit: '1MB'}), (req: Request & ParsedAsText, res: R
 
 ```
 
-[More examples](./test/test.ts)
+[More examples](./test)
 
 ## Contributing
 You can run the tests by running `npm run build` and then `npm run test`.
