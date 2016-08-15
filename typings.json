@@ -1,7 +1,7 @@
 {
   "name": "body-parser",
   "main": "index.d.ts",
-  "homepage": "https://github.com/felixfbecker/typed-body-parser",
+  "homepage": "https://github.com/types/npm-body-parser",
   "dependencies": {},
   "version": "1.15.2",
   "globalDependencies": {

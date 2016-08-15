@@ -1,5 +1,5 @@
 # Typed body-parser
-[![Build Status](https://travis-ci.org/felixfbecker/typed-body-parser.svg?branch=master)](https://travis-ci.org/felixfbecker/typed-body-parser)
+[![Build Status](https://travis-ci.org/types/npm-body-parser.svg?branch=master)](https://travis-ci.org/types/npm-body-parser)
 
 Typescript Typings for [body-parser](https://github.com/expressjs/body-parser).
 
