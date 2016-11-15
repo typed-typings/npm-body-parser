@@ -2,10 +2,12 @@
   "name": "body-parser",
   "main": "index.d.ts",
   "homepage": "https://github.com/types/npm-body-parser",
-  "dependencies": {},
+  "dependencies": {
+    "express": "registry:npm/express#4.14.0+20160925001530"
+  },
   "version": "1.15.2",
   "globalDependencies": {
-    "node": "registry:env/node#6.0.0+20160723033700"
+    "node": "registry:env/node#6.0.0+20161105011511"
   },
   "devDependencies": {
     "express": "registry:npm/express#4.14.0+20160810205701"
