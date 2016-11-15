@@ -16,7 +16,7 @@ export interface ParserOptions {
     /**
      * request content-type to parse, passed directly to the type-is library. (default: 'json')
      */
-    type?: string | ((req: IncomingMessage) => boolean);
+    type?: string | string[] | ((req: IncomingMessage) => boolean);
     /**
      * function to verify body content, the parsing can be aborted by throwing an error.
      */
