@@ -84,6 +84,11 @@ export interface UrlencodedParserOptions {
     extended?: boolean;
 
     /**
+     * maximum request body size. (default: '100kb')
+     */
+    limit?: number | string;
+
+    /**
      * controls the maximum number of parameters that are allowed in the URL-encoded data.
      * If a request contains more parameters than this value, a 413 will be returned to the client. Defaults to 1000.
      */
