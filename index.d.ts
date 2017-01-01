@@ -77,16 +77,11 @@ export interface ParsedAsText {
     body: string;
 }
 
-export interface UrlencodedParserOptions {
+export interface UrlencodedParserOptions extends ParserOptions {
     /**
      * parse extended syntax with the qs module.
      */
     extended?: boolean;
-
-    /**
-     * maximum request body size. (default: '100kb')
-     */
-    limit?: number | string;
 
     /**
      * controls the maximum number of parameters that are allowed in the URL-encoded data.
