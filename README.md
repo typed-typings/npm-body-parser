@@ -1,4 +1,6 @@
 # Typed body-parser
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/types/npm-body-parser.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/types/npm-body-parser.svg?branch=master)](https://travis-ci.org/types/npm-body-parser)
 
 Typescript Typings for [body-parser](https://github.com/expressjs/body-parser).
