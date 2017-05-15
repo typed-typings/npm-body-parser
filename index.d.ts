@@ -77,7 +77,7 @@ export interface ParsedAsText {
     body: string;
 }
 
-export interface UrlencodedParserOptions {
+export interface UrlencodedParserOptions extends ParserOptions {
     /**
      * parse extended syntax with the qs module.
      */
